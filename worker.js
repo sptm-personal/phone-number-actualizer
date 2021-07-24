@@ -31,7 +31,7 @@ if (process.env.workerName === 'eventhandler') {
       process.send({ decreaseCurrentCalls: true });
     }
 
-    if ((event.event === 'Newstate' && (event.channelstate === '5' || event.channelstate === '6'))
+    if ((event.event === 'Newstate' && (event.channelstate === config.CHANNELSTATE_RINGING || event.channelstate === config.CHANNELSTATE_UP))
     || (event.event === 'RTCPSent' && event.channelstatedesc === 'Up')) {
       logger.info(`${event.calleridnum} OK!`);
 
