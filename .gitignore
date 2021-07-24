@@ -1,0 +1,14 @@
+# app
+*.txt
+*.log
+.env
+
+# node.js
+node_modules
+
+# system
+.DS_Store
+Thumbs.db
+
+# ide
+.vscode
