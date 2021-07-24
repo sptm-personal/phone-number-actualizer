@@ -53,7 +53,7 @@ const sendCalls = async (callsQuantity) => {
 };
 
 cluster.setupMaster({
-  exec: 'eventhandler.js',
+  exec: 'worker.js',
 });
 const eventhandler = cluster.fork({ workerName: 'eventhandler' });
 
