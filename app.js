@@ -23,7 +23,7 @@ let numbers;
 try {
   numbers = fs.readFileSync(config.NUMBERS_FILE, 'utf8').toString().split('\n').map((number) => parseInt(number, 10));
 } catch (err) {
-  logger.debug(`Numbers file read error: ${err.message}`);
+  logger.error(`Numbers file read error: ${err.message}`);
   process.exit(1);
 }
 
