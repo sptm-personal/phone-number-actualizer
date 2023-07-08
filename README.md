@@ -23,7 +23,7 @@ It just takes phone numbers from a file (line by line), calls these numbers via 
 
 ## Development mode
 
-You can also run apps in development mode without build: run `npm run app:dev`.
+You can also run apps in development mode without building: run `npm run app:dev`.
 
 ## Run tests
 
