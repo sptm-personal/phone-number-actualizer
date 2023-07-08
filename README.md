@@ -1,15 +1,30 @@
 # Phone Number Actualizer
 
+![Branches](https://github.com/sptm-personal/phone-number-actualizer/blob/badges/badges/coverage-branches.svg)
+![Functions](https://github.com/sptm-personal/phone-number-actualizer/blob/badges/badges/coverage-functions.svg)
+![Lines](https://github.com/sptm-personal/phone-number-actualizer/blob/badges/badges/coverage-lines.svg)
+![Statements](https://github.com/sptm-personal/phone-number-actualizer/blob/badges/badges/coverage-statements.svg)
+![Jest coverage](https://github.com/sptm-personal/phone-number-actualizer/blob/badges/badges/coverage-jest%20coverage.svg)
+
 ## Description
 
-This is a small piece of software working via Asterisk AMI. It just takes phone numbers from a file (line by line), calls these numbers via AMI and tries to understand by AMI events if given numbers are valid.
+This is a small app working via Asterisk AMI. 
+It just takes phone numbers from a file (line by line), calls these numbers via AMI and tries to understand by AMI events if given numbers are valid.
 
 ## Installation
 
-Please check .env.example first — you need to have .env file for the app to work properly.
-Besides that, it's quite simple to run the app:
+- Run `cp .env.example .env` and put correct values to `.env` file.
+- Run `npm install` to install project dependencies.
 
-```bash
-npm install
-node app.js
-```
+## Production mode
+
+- Run `npm run build` to build the project.
+- You can now start the app with this command: `npm run app`.
+
+## Development mode
+
+You can also run apps in development mode without build: run `npm run app:dev`.
+
+## Run tests
+
+To run tests, please use `npm run test`.

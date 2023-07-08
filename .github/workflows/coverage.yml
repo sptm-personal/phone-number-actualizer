@@ -1,0 +1,43 @@
+name: Code Coverage
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Delete remote badges branch
+        run: git push origin --delete badges &>/dev/null || true
+
+      - name: Create badges branch
+        run: git checkout -b badges
+
+      - name: Run the tests
+        run: npm test
+
+      - name: Jest badges generation action
+        uses: jpb06/jest-badges-action@v1.9.16
+        with:
+          branches: '*'
+          target-branch: badges
+
+      - name: Push badges branch
+        run: git push origin badges
+
