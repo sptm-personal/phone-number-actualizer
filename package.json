@@ -1,12 +1,11 @@
 {
   "name": "phone-number-actualizer",
-  "type": "module",
   "version": "2.0.0",
   "description": "Asterisk AMI-based phone number validator/actualizer",
   "main": "app.ts",
   "scripts": {
     "eslint-check": "npx eslint . --ext .ts",
-    "test": "jest",
+    "test": "jest --passWithNoTests --coverage",
     "app:dev": "ts-node --swc app.ts",
     "build": "tsc",
     "app": "node build/app.js"
