@@ -5,7 +5,7 @@
   "main": "app.ts",
   "scripts": {
     "eslint-check": "npx eslint . --ext .ts",
-    "test": "jest --passWithNoTests --coverage",
+    "test": "jest --coverage",
     "app:dev": "ts-node --swc app.ts",
     "build": "tsc",
     "app": "node build/app.js"
